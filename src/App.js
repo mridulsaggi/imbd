@@ -1,22 +1,22 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "../src/components/navbar/navbar"
+import Movielist from "./components/movielist/movielist"
+import Moviedata from "./components/movielist/moviedata"
+import Home from "../src/pages/home/home"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header/>
+          <Routes>
+            <Route index element={<Home></Home>}></Route>
+            <Route path="/movie/:id" element={<Moviedata/>}></Route>
+            <Route path="/*" element={<h1>ERROR 404 PAGE NOT FOUND!!</h1>}></Route>
+            <Route path="movies/:type" element={<Movielist/>}></Route>
+          </Routes>
+      </Router>
     </div>
   );
 }

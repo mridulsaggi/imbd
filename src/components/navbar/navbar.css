@@ -1,0 +1,25 @@
+.navbar{
+    width:100%;
+    height:3rem;
+    color: white;
+    display: flex;
+    font-size: 2rem;
+    margin:1rem 0;
+}
+.logo{
+    height:3rem;
+    margin:0 3rem 0 0;
+    width:6rem;
+    border-radius: 0.5rem;
+}
+.subhead{
+    color: white;
+    margin:0 3rem;
+    text-decoration: none;
+}
+.subhead:hover{
+    
+    cursor: pointer;
+    list-style: none;
+    color: red;
+}
